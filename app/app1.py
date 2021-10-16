@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
   
 def app():
-    st.image('data_scientist.png',use_column_width=True)
+    st.image('app/data_scientist.png',use_column_width=True)
     st.title('Context')
     st.write('The number of companies that hire data scientists is increasing\
             since big data analytics help companies to make informed decisions and understand their customer desires better.\
