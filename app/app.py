@@ -11,8 +11,8 @@ import streamlit as st
 
 PAGES = {
     "About the Dataset": app1,
-    "Analysis1": app2,
-    "Analysis2": app3,
+    "Analysis1": app3,
+    "Analysis2": app2,
     "Writeup": app4,
     'Developer Contact': app5
     }
