@@ -17,7 +17,7 @@ PAGES = {
     'Developer Contact': app5
     }
 
-st.sidebar.title('Page Navigation')
+st.sidebar.title('HW2 for 05839 CMU (Interactive Data Science): Page Navigation')
 selection = st.sidebar.selectbox("Go to", list(PAGES.keys()))
 page = PAGES[selection]
 page.app()
