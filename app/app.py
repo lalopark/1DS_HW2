@@ -4,6 +4,7 @@ import app2
 import app3
 import app4
 import app5
+import pandas as pd
 
 import streamlit as st
 
