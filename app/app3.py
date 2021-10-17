@@ -100,18 +100,6 @@ def app():
         y="Count"
     ).properties(width=600, height=400).configure_axisX(labelAngle=45).interactive()
     
-    st.altair_chart(c)
-    
-    final = df2.groupby(['gender','last_new_job','experience']).count().reset_index()
-    fig = px.scatter(x=list(final['experience']), y=list(final['last_new_job']),
-                color=final["gender"],size = final['major_discipline'],
-                     title = 'Distribution of Data Scientists by Experience and Last New Job',
-                     labels={
-                     "x": "Experience",
-                     "y": "Last New Job"
-                 }
-                     )
-
-    st.plotly_chart(fig)
+  
 
 
