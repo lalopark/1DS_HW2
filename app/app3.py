@@ -17,7 +17,7 @@ import re
 
 
 def app():
-    st.title('Analysis2')
+    st.title('Analysis1')
     train = pd.read_csv('app/aug_train.csv')
 
     exp_clean = list()
