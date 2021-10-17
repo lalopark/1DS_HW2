@@ -45,11 +45,11 @@ def app():
     st.plotly_chart(fig5)
        
     df_melt = train.melt(id_vars='education_level', value_vars='city_development_index')
-    box2 = px.box(df_melt, x="education_level", y="value", title='Experience Distribution by Education Level)
+    box2 = px.box(df_melt, x="education_level", y="value", title='Experience Distribution by Education Level')
     st.plotly_chart(box2)
     
     df_melt_3 = train.melt(id_vars='major_discipline', value_vars='experience')
-    box3 = px.box(df_melt_3, x="major_discipline", y="value", title='Experience Distribution by Major)
+    box3 = px.box(df_melt_3, x="major_discipline", y="value", title='Experience Distribution by Major')
     st.plotly_chart(box3)
 
     fig2 = px.histogram(train, x= 'training_hours', nbins = 50, title='Training Hour Distribution of Candidates')
