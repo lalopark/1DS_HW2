@@ -11,7 +11,7 @@ import streamlit as st
 
 def app():
     st.title('Writeup')
-    st.image('app/female-ds.png',use_column_width=True)
+    st.image('app/female-ds.jpeg',use_column_width=True)
     
     st.write('We created several different visualizations of the data set from both a macro and micro lens by\
     first illustrated the general statistical distributions of the data scientist candidate population in terms\
