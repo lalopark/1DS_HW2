@@ -11,7 +11,7 @@ import streamlit as st
 
 def app():
     st.title('Analysis1')
-    train = pd.read_csv('aug_train.csv')
+    train = pd.read_csv('app/aug_train.csv')
 
     st.write("Here's our first attempt at using data to create a table:")
     train = train.replace({'company_size': '10/49'}, '10-49')
