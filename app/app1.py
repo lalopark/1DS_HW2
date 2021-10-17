@@ -40,7 +40,8 @@ def app():
                          'Whether the candidate is currently looking for a job']}
     
       
-
+    train = pd.read_csv('app/aug_train.csv')
+    st.write(train)
         
 
    
