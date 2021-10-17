@@ -10,7 +10,7 @@ import os.path
 import streamlit as st
 
 def app():
-    st.title('Analysis1')
+    st.title('Analysis2')
     train = pd.read_csv('app/aug_train.csv')
 
     train = train.replace({'company_size': '10/49'}, '10-49')
