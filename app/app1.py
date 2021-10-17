@@ -9,7 +9,7 @@ def app():
     As students of data science, we were interested in diving into the HR analytics involving data science practitioners,\
     hence obtained a dataset from [Kaggle](https://www.kaggle.com/arashnic/hr-analytics-job-change-of-data-scientists)"\
     that includes the demographic, education, and experience information of data scientist candidates for a company. ')
-    st.title('About Data')
+    st.title('About the Dataset')
     st.write('This dataset includes 14 features of 19093 data scientists such as demographics, education, and experience level\
     and is divided into test and train, the latter containing an additional column of “whether the candidate is currently looking\
     for a job” which we’ve utilized to create an interactive sidebar feature to collect the user’s input responses to predict their\
@@ -18,7 +18,7 @@ def app():
     we’ve made sure to output a qualifying statement: “we’ll need more information to guess your next move!”')
 
     # dictionary with list object in values
-    st.title('Data')
+    st.title('What the Dataset Looks Like')
     details = {
         'Column' : ['enrollee_id','city','city_development_index','Gender',\
                     'relevent_experience','enrolled_university','education_level',\
