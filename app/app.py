@@ -22,5 +22,4 @@ selection = st.sidebar.selectbox("Go to", list(PAGES.keys()))
 page = PAGES[selection]
 page.app()
 
-st.sidebar.title('Developer Contact')
 
