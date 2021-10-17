@@ -19,7 +19,7 @@ def app():
     train = train.replace({'education_level': 'Graduate'}, 'Undergraduate')
     train = train.replace({'major': 'Other'}, 'other_major')
     train = train.fillna(value={'gender':'Female'})
-    train = train.fillna('other')
+    train = train.fillna('Other')
 
     train.rename(columns={'gender': 'Gender', 'Education_level': 'Education_level'})
     
