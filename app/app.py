@@ -11,8 +11,8 @@ import streamlit as st
 PAGES = {
     "About the Dataset": app1,
     "Analysis1": app2,
-    "Analysis2": app4,
-    "Writeup": app3
+    "Analysis2": app3,
+    "Writeup": app4
 }
 st.sidebar.title('Page Navigation')
 selection = st.sidebar.selectbox("Go to", list(PAGES.keys()))
