@@ -15,8 +15,8 @@ PAGES = {
     "Analysis2": app3,
     "Writeup": app4,
     'Developer Contact': app5
-    
-}
+    }
+
 st.sidebar.title('Page Navigation')
 selection = st.sidebar.selectbox("Go to", list(PAGES.keys()))
 page = PAGES[selection]
