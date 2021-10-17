@@ -11,7 +11,6 @@ import streamlit as st
 
 def app():
     st.title('Writeup')
-    st.write('Welcome to writeup')
     
     st.write('We created several different visualizations of the data set from both a macro and micro lens by\
     first illustrated the general statistical distributions of the data scientist candidate population in terms\
