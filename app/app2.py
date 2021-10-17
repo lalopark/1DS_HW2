@@ -32,7 +32,7 @@ def app():
     df_selected = train[(train.gender.isin(selected_gender) & train.education_level.isin(selected_education))]
 
     # Education_level bar graph
-    st.header('Display Entire Dataset of Selected Gender(s) & Education Level(s)')
+    st.header('Take a closer look at the dataset based on gender and education levels. Try clicking the filters above!')
     st.write('Data Dimension: ' + str(df_selected.shape[0]) + ' rows and ' + str(df_selected.shape[1]) + ' columns.')
     university_df = df_selected.groupby(['enrolled_university']).count().reset_index()[['enrolled_university','enrollee_id']].rename(columns={'enrollee_id':'Count'})
     #st.dataframe(university_df)
