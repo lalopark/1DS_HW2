@@ -35,11 +35,14 @@ def app():
 
     df = train[train['experience'].notna()]
     df['experience'] = df['experience'].astype(int)
+    df = df.replace({'education_level': 'Graduate'}, 'Undergraduate')
     df2 = train[train['last_new_job'].notna()]
     df2['last_new_job'] = df2['last_new_job'].astype(int)
 
     fig1 = px.histogram(train, x= 'city_development_index', nbins = 50, title='City Development Index Distribution of Candidates')
     st.plotly_chart(fig1) 
+    
+ 
     
     fig5 = px.pie(df, names='education_level', title='Education Levels of Candiates') 
     st.plotly_chart(fig5)
