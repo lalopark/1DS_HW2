@@ -10,5 +10,5 @@ import streamlit as st
 
 def app():
   st.title('Developer Contact')
-  st.write('Su Park')
-  st.write('Ye Rin Han')
+  st.write('Ye Rin Han (yerinh@cs.cmu.edu)')
+  st.write('Su Park (suminpar@cs.cmu.edu)') 
