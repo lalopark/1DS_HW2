@@ -37,7 +37,7 @@ train = train.fillna('other')
 # group by 
 group = train.groupby(['gender', 'relevent_experience', 'education_level', 'major_discipline', 'experience', 'last_new_job'])['target'].mean()
 group = pd.DataFrame(group).reset_index()
-st.write(group)
+
 with st.form(key ='Form1'):
     with st.sidebar:
         name = st.text_input("What is your name?")
