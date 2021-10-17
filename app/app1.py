@@ -7,7 +7,7 @@ def app():
     st.title('Context')
     st.write('The demand for data scientists has been steadily increasing as the job title is often referenced as "the sexiest job of the 21st century.” \
     As students of data science, we were interested in diving into the HR analytics involving data science practitioners,\
-    hence obtained a dataset from Kaggle (https://www.kaggle.com/arashnic/hr-analytics-job-change-of-data-scientists)\
+    hence obtained a dataset from [Kaggle](https://www.kaggle.com/arashnic/hr-analytics-job-change-of-data-scientists)"\
     that includes the demographic, education, and experience information of data scientist candidates for a company. ')
     st.title('About Data')
     st.write('This dataset includes 14 features of 19093 data scientists such as demographics, education, and experience level\
@@ -18,6 +18,7 @@ def app():
     we’ve made sure to output a qualifying statement: “we’ll need more information to guess your next move!”')
 
     # dictionary with list object in values
+    st.title('Data')
     details = {
         'Column' : ['enrollee_id','city','city_development_index','Gender',\
                     'relevent_experience','enrolled_university','education_level',\
@@ -42,10 +43,7 @@ def app():
     # creating a Dataframe object 
     df = pd.DataFrame(details)
     st.write(df)
-
-    st.write("Data Source [link](https://www.kaggle.com/arashnic/hr-analytics-job-change-of-data-scientists)")
-    
-             
+          
     #sidebar section
     # data manipulation
     train = pd.read_csv('app/aug_train.csv')
