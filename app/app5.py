@@ -8,6 +8,7 @@ import pickle as pkle
 import os.path
 import streamlit as st
 
-st.title('Developer Contact')
-st.write('Su Park')
-st.write('Ye Rin Han')
+def app():
+  st.title('Developer Contact')
+  st.write('Su Park')
+  st.write('Ye Rin Han')
