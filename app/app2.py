@@ -13,15 +13,12 @@ def app():
     st.title('Analysis1')
     train = pd.read_csv('app/aug_train.csv')
 
-    st.write("Here's our first attempt at using data to create a table:")
     train = train.replace({'company_size': '10/49'}, '10-49')
     train = train.replace({'company_size': '<10'}, '1-9')
     train = train.replace({'company_size': '100-500'}, '100-499')
     train = train.replace({'education_level': 'Graduate'}, 'Undergraduate')
     train = train.fillna(value={'gender':'Female'})
     train = train.fillna('other')
-    
-    st.write(train)
 
     train.rename(columns={'gender': 'Gender', 'Education_level': 'Education_level'})
     
