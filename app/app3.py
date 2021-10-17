@@ -47,7 +47,7 @@ def app():
     fig5 = px.pie(df, names='education_level', title='Education Levels of Candiates') 
     st.plotly_chart(fig5)
        
-    df_melt = train.melt(id_vars='education_level', value_vars='city_development_index')
+    df_melt = train.melt(id_vars='education_level', value_vars='experience')
     box2 = px.box(df_melt, x="education_level", y="value", title='Experience Distribution by Education Level')
     st.plotly_chart(box2)
     
