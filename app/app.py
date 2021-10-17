@@ -8,7 +8,6 @@ import app5
 import streamlit as st
 
 
-
 PAGES = {
     "About the Dataset": app1,
     "Analysis1": app2,
