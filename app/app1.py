@@ -22,10 +22,10 @@ def app():
         'Column' : ['enrollee_id','city','city_development_index','Gender',\
                     'relevent_experience','enrolled_university','education_level',\
                     'major_discipline','experience','company_size','company_type',\
-                    'last_new_job','training_hours'],
+                    'last_new_job','training_hours','target'],
         'Description' : ['Unique ID for candidate',\
                          'City code',\
-                         'Developement index of the city (scaled)'
+                         'Developement index of the city (scaled)',\
                          'Gender of candidate',\
                          'Relevant experience of candidate',\
                          'Type of University course enrolled if any',\
