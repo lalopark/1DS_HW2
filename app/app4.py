@@ -11,4 +11,4 @@ import streamlit as st
 
 def app():
     st.title('Analysis2')
-    train = pd.read_csv('aug_train.csv')
+    train = pd.read_csv('app/aug_train.csv')
