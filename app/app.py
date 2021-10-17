@@ -78,7 +78,7 @@ if val.empty:
     st.sidebar.success('We’ll need more information to guess your next move!')
 else:
     #st.write('Your probability of getting data scientist position is ',round(float(val)*100,3),'%')
-    st.sidebar.success('Your probability of getting data scientist position is ', round(float(val)*100,3))
+    st.sidebar.success('Your probability of getting data scientist position is '+ str(round(float(val)*100,3)) + '.')
 
 
 
