@@ -15,7 +15,7 @@ def app():
     for a job” which we’ve utilized to create an interactive sidebar feature to collect the user’s input responses to predict their\
     likelihood of looking for a new job at the moment, based on the provided data set. We’d like to inform the users and our site\
     visitors that the provided dataset is quite imbalanced on several demographical facets, hence in cases when the probability,\
-    we’ve made sure to output a qualifying statement: “we’ll need more information to guess your next move!”'')
+    we’ve made sure to output a qualifying statement: “we’ll need more information to guess your next move!”')
 
     # dictionary with list object in values
     details = {
