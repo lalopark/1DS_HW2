@@ -1,7 +1,7 @@
 # 1DS_HW2
 
 ## A clear description of the goals of your project. 
-The goal of our project was to dive into a dataset and uncover trends in the data scientist hiring process by analyzing the candidate pool in terms of various demographic and professional characteristics. As students and current practitioners of data science, we are always intrigued by questions such as “What makes a good candidate for a data scientist?” and “Where do I stand in the job market in this region for this year?” Our motivation was to dissect the anonymized dataset with as much detail as possible from gender, education level, city, and years of experience to understand which candidates may be looking for jobs, whether it’s their very first foot in the door or a second/third position as a Data Scientist.  
+The goal of our project was to dive into a HR Analytics dataset and uncover trends in the data scientist hiring process by analyzing the candidate pool in terms of various demographic and professional characteristics. As students and current practitioners of data science, we are always intrigued by questions such as “What makes a good candidate for a data scientist?” and “Where do I stand in the job market in this region for this year?” Our motivation was to dissect the anonymized dataset with as much detail as possible from gender, education level, city, and years of experience to understand which candidates may be looking for jobs, whether it’s their very first foot in the door or a second/third position as a Data Scientist.  
 
 ## A rationale for your design decisions. 
 We decided to include 
