@@ -14,7 +14,7 @@ def app():
     st.write('Welcome to writeup')
 
     # data manipulation
-    train = pd.read_csv('aug_train.csv')
+    train = pd.read_csv('app/aug_train.csv')
     train = train.replace({'company_size': '10/49'}, '10-49')
     train = train.replace({'company_size': '<10'}, '1-9')
     train = train.replace({'company_size': '100-500'}, '100-499')
