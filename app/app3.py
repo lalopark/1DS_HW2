@@ -66,5 +66,49 @@ def app():
 
     fig4 = px.histogram(df2, x='last_new_job', nbins=5, title='Last New Job Distribution of Candidates')
     st.plotly_chart(fig4)
+    
+    
+    train = pd.read_csv('app/aug_train.csv')
+    exp_clean = list()
+    nj_clean = list()
+    for i in train['experience'].astype(str):
+        exp_clean.append(''.join(e for e in i if e.isalnum()))
+    for i in train['last_new_job'].astype(str): 
+        nj_clean.append(''.join(e for e in i if e.isalnum()))
+
+    train['experience'] = exp_clean
+    train['last_new_job'] = nj_clean
+
+    train['experience'] = pd.to_numeric(train['experience'], errors='coerce')
+    train['last_new_job'] = pd.to_numeric(train['last_new_job'], errors='coerce')
+
+    df = train[train['experience'].notna()]
+    df['experience'] = df['experience'].astype(int)
+    df2 = train[train['last_new_job'].notna()]
+    df2['last_new_job'] = df2['last_new_job'].astype(int)
+    df2 = df2.replace({'gender': 'Other'}, 'Female')
+    df2 = df2.fillna(value={'gender':'Female'})
+
+    imbalance = df2.groupby('gender').count().reset_index()
+    imbalance = imbalance.rename(columns={'enrollee_id': 'Count','gender':'Gender'})
+ 
+    c = alt.Chart(imbalance, title = 'Gender Imbalanced Data').mark_bar().encode(
+        x="Gender",
+        y="Count"
+    ).properties(width=600, height=400).configure_axisX(labelAngle=45).interactive()
+    
+    st.altair_chart(c)
+    
+    final = df2.groupby(['gender','last_new_job','experience']).count().reset_index()
+    fig = px.scatter(x=list(final['experience']), y=list(final['last_new_job']),
+                color=final["gender"],size = final['major_discipline'],
+                     title = 'Distribution of Data Scientists by Experience and Last New Job',
+                     labels={
+                     "x": "Experience",
+                     "y": "Last New Job"
+                 }
+                     )
+
+    st.plotly_chart(fig)
 
 
