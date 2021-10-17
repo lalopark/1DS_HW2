@@ -40,9 +40,26 @@ def app():
 
     fig1 = px.histogram(train, x= 'city_development_index', nbins = 50, title='City Development Index Distribution of Candidates')
     st.plotly_chart(fig1) 
+    
+    fig5 = px.pie(df, names='education_level', title='Education Levels of Candiates') 
+    st.plotly_chart(fig5)
+       
+    df_melt = train.melt(id_vars='education_level', value_vars='city_development_index')
+    box2 = px.box(df_melt, x="education_level", y="value")
+    st.plotly_chart(box2)
+    
+    df_melt_3 = train.melt(id_vars='major_discipline', value_vars='experience')
+    box3 = px.box(df_melt_3, x="major_discipline", y="value")
+    st.plotly_chart(box3)
 
     fig2 = px.histogram(train, x= 'training_hours', nbins = 50, title='Training Hour Distribution of Candidates')
     st.plotly_chart(fig2) 
+    
+    group = train.groupby(['training_hours','relevent_experience']).size()
+    group = group.reset_index()
+    group.columns.values[2] = "count" 
+    fig6 = px.line(group, x="training_hours", y="count", color="relevent_experience", title='Density Curve of ')
+    st.plotly_chart(fig6)
 
     fig3 = px.histogram(df, x='experience', nbins=50, title='Experience Distribution of Candidates')
     st.plotly_chart(fig3)
@@ -50,12 +67,4 @@ def app():
     fig4 = px.histogram(df2, x='last_new_job', nbins=5, title='Last New Job Distribution of Candidates')
     st.plotly_chart(fig4)
 
-    fig5 = px.pie(df, names='education_level', title='Education Levels of Candiates') 
-    st.plotly_chart(fig5)
 
-    group = train.groupby(['training_hours','relevent_experience']).size()
-    group = group.reset_index()
-    group.columns.values[2] = "count" 
-
-    fig6 = px.line(group, x="training_hours", y="count", color="relevent_experience", title='Density Curve of ')
-    st.plotly_chart(fig6)
