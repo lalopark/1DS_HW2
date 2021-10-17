@@ -69,16 +69,5 @@ def app():
     ).properties(width=600, height=400).configure_axisX(labelAngle=45).interactive()
     st.altair_chart(c)
 
-    
-
-
-    '''
-    scatter = alt.Chart(df_selected).mark_circle().encode(
-        alt.X('major_discipline', scale=alt.Scale(zero=False),
-                axis=alt.Axis(grid=False)),
-        alt.Y('training_hours', scale=alt.Scale(zero=False),
-                axis=alt.Axis(grid=False)),
-        color='gender').properties(width=600, height=400)
-    st.altair_chart(scatter)
-    '''
+  
 
